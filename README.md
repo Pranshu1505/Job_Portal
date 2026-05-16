@@ -184,9 +184,9 @@ The application is deployed on **Render**:
 
 <div align="center">
 
-**Pranshu Abhishek**
+**Pranshu **
 
-[![GitHub](https://img.shields.io/badge/GitHub-Pranshu1505-181717?style=for-the-badge&logo=github)](https://github.com/pranshuabhishek)
+[![GitHub](https://img.shields.io/badge/GitHub-Pranshu1505-181717?style=for-the-badge&logo=github)](https://github.com/Pranshu1505)
 
 *Built with ❤️ using the MERN Stack*
 
