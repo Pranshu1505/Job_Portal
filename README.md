@@ -186,7 +186,7 @@ The application is deployed on **Render**:
 
 **Pranshu Abhishek**
 
-[![GitHub](https://img.shields.io/badge/GitHub-pranshuabhishek-181717?style=for-the-badge&logo=github)](https://github.com/pranshuabhishek)
+[![GitHub](https://img.shields.io/badge/GitHub-Pranshu1505-181717?style=for-the-badge&logo=github)](https://github.com/pranshuabhishek)
 
 *Built with ❤️ using the MERN Stack*
 
