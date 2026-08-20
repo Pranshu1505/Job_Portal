@@ -123,11 +123,13 @@ export const login = async(req, res) => {
             profile:user.profile
         }
 
-        return res.status(200).cookie("token", token,{maxAge:1*24*60*60*1000, httpOnly:true, sameSite:'strict'}).json({
-            message:`Welcome back ${user.fullname}`,
-            user,
-            tokenExpiresAt: Date.now() + 1*24*60*60*1000,
-            success:true,
+        return res.status(200).cookie("token", token,{maxAge:1*24*60*60*1000, httpOnly:true, sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            secure: process.env.NODE_ENV === "production" ? true : false})
+            .json({
+                message:`Welcome back ${user.fullname}`,
+                user,
+                tokenExpiresAt: Date.now() + 1*24*60*60*1000,
+                success:true,
         })
     } catch (error) {
         console.log(error);
@@ -136,9 +138,11 @@ export const login = async(req, res) => {
 
 export const logout = async(req,res) => {
     try {
-        return res.status(200).cookie("token", "",{maxAge:0}).json({
-            message:"Logged out Successfully",
-            success:true,
+        return res.status(200).cookie("token", "",{maxAge:0, sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+            secure: process.env.NODE_ENV === "production" ? true : false})
+            .json({
+                message:"Logged out Successfully",
+                success:true,
         })
     } catch (error) {
         console.log(error);
