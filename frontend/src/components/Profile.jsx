@@ -57,10 +57,10 @@ function Profile() {
                     <ArrowLeft/>
                     <span>Back</span>
                 </Button>
-            
-            <div className='flex justify-between'>
-                <div className='flex items-center gap-4'>
-                    <Avatar className="h-24 w-24 my-10 ml-4">
+         <div className='max-w-4xl mx-auto bg-white border border-gray-200 rounded-4xl my-5 pt-8 px-4 sm:px-0'>
+            <div className='flex flex-col sm:flex-row sm:justify-between gap-4'>
+                <div className='flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left'>
+                    <Avatar className="h-20 w-20 sm:h-24 sm:w-24 sm:my-10 sm:ml-4">
                         <AvatarImage src={user?.profile?.profilePhoto || profileImg} alt="profile"/>
                     </Avatar>
                     <div>
@@ -70,6 +70,7 @@ function Profile() {
                 </div>
                 <Button onClick={() => setOpen(true)} className="text-right mr-3" variant="outline"><Pen/></Button>
             </div>
+         </div>
             <div className='my-5'>
                 <div className='flex items-center gap-3 my-5 ml-3'>
                     <Mail/>

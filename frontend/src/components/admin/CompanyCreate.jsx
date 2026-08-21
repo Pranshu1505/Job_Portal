@@ -37,8 +37,8 @@ const CompanyCreate = () => {
   return (
     <div>
         <Navbar/>
-        <div className='max-w-4xl mx-auto'>
-            <div className='my-10'>
+        <div className='max-w-4xl mx-auto px-4'>
+            <div className='flex flex-col sm:flex-row items-stretch sm:items-center gap-2 my-10'>
                 <Button onClick={() => navigate("/admin/companies")} variant='outline' className="flex items-center gap-2 text-gray-500 font-semibold">
                     <ArrowLeft/>
                     <span>Back</span>
@@ -47,7 +47,7 @@ const CompanyCreate = () => {
                 <p className='text-gray-500'>What would you like to give your company name</p>
             </div>
             
-
+           
             <Label>Company Name</Label>
             <Input
             type='text'

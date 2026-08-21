@@ -72,7 +72,7 @@ const JobSetup = () => {
     return (
         <div>
             <Navbar />
-            <div className='max-w-4xl mx-auto my-10'>
+            <div className='max-w-4xl mx-auto my-10 px-4'>
                 <form onSubmit={submitHandler} className='p-8 shadow-lg rounded-md'>
                     <div className='flex items-center gap-5 mb-6'>
                         <Button onClick={() => navigate("/admin/jobs")} variant='outline' className="flex items-center gap-2 text-gray-500 font-semibold">
@@ -81,7 +81,7 @@ const JobSetup = () => {
                         </Button>
                         <h1 className='font-bold text-xl'>Job Setup</h1>
                     </div>
-                    <div className='grid grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                         <div>
                             <Label>Title</Label>
                             <Input type="text" name="title" value={input.title} onChange={changeEventHandler} className="my-1" />

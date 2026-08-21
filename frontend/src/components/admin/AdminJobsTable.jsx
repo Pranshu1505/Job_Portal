@@ -11,7 +11,7 @@ const AdminJobsTable = () => {
     const navigate = useNavigate();
 
     return (
-        <div>
+        <div className='overflow-x-auto'>
             <Table>
                 <TableCaption>A list of your recent posted jobs</TableCaption>
                 <TableHeader>

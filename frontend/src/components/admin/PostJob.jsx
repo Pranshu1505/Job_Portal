@@ -67,13 +67,13 @@ const PostJob = () => {
     return (
         <div>
             <Navbar />
-            <div className='max-w-4xl mx-auto my-10'>
+            <div className='max-w-4xl mx-auto my-10 px-4'>
                 <Button onClick={() => navigate("/admin/jobs")} variant='outline' className="flex items-center gap-2 text-gray-500 font-semibold">
                         <ArrowLeft/>
                         <span>Back</span>
                     </Button>
                 <form onSubmit={submitHandler} className='p-8 shadow-lg rounded-md'>
-                    <div className='grid grid-cols-2 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                         <div>
                             <Label>Title</Label>
                             <Input
