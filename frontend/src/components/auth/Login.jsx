@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../shared/Navbar.jsx'
 import { Label } from '../ui/label.jsx'
 import { Input } from '../ui/input.jsx'
@@ -26,6 +26,9 @@ function Login() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const location = useLocation();
+    useEffect(() => {
+        dispatch(setLoading(false));
+    }, []);
 
     const submitHandler = async (e) =>{
         try {
