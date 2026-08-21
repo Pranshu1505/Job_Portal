@@ -55,13 +55,13 @@ function Browse() {
             <span>Back</span>
         </Button>
 
-        <div className='flex items-center gap-3 my-5'>
+        <div className='flex flex-col sm:flex-row items-stretch sm:items-center gap-3 my-5'>
             <Input
                 placeholder="Search by job title, company, or location"
                 value={localQuery}
                 onChange={(e) => setLocalQuery(e.target.value)}
                 onKeyDown={(e) => { if(e.key === 'Enter') searchHandler(); }}
-                className="max-w-md"
+                className="w-full sm:max-w-md"
             />
             <Button onClick={searchHandler} className="bg-[#6A38C2] hover:bg-[#5b2fa8]">
                 <Search className='h-4 w-4'/>
@@ -70,7 +70,7 @@ function Browse() {
             <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className='ml-auto border rounded-md px-3 py-2 text-sm'
+                className='sm:ml-auto border rounded-md px-3 py-2 text-sm'
             >
                 <option value="newest">Newest First</option>
                 <option value="salary-high">Salary: High to Low</option>
@@ -87,7 +87,7 @@ function Browse() {
                     <p className='text-sm'>Try a different search term or clear your filters</p>
                 </div>
             ) : (
-                <div className='grid grid-cols-3 gap-4 pb-10'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-10'>
                     {
                         displayJobs.map((job) => (
                             <Job key={job?._id} job={job}/>
