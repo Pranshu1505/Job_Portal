@@ -16,21 +16,21 @@ function HeroSection() {
   }
 
   return (
-    <div className='text-center '>
-        <div className='flex flex-col gap-4 my-10'>
-            <span className='mx-auto px-4 py-2 rounded-full bg-gray-300 text-[#F83001] font-medium'>No. 1 Job Hunt Website</span>
-            <h1 className='text-5xl font-bold'>Search, Apply & <br/> Get Your <span className='text-[#6A38C2]'>Dream Joobs </span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus fugit, explicabo ad atque ?</p>
-            <div className='flex w-[40%] shadow-lg border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto'>
+    <div className='text-center px-4'>
+        <div className='flex flex-col gap-4 my-6 md:my-10'>
+            <span className='mx-auto px-4 py-2 rounded-full bg-gray-300 text-[#F83001] font-medium text-sm md:text-base'>No. 1 Job Hunt Website</span>
+            <h1 className='text-3xl md:text-5xl font-bold leading-tight'>Search, Apply & <br/> Get Your <span className='text-[#6A38C2]'>Dream Joobs </span></h1>
+            <p className='text-sm md:text-base px-2'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus fugit, explicabo ad atque ?</p>
+            <div className='flex w-full md:w-[40%] shadow-lg border-gray-200 pl-3 rounded-full items-center gap-2 mx-auto'>
                 <input
                     type='text'
                     placeholder='Find Your dream jobs'
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={(e) => { if(e.key === 'Enter') searchJobHandler(); }}
-                    className='outline-none border-none w-full'
+                    className='outline-none border-none w-full min-w-0 text-sm md:text-base'
                 />
-                <Button onClick={searchJobHandler} className="rounded-r-full bg-[#6A38C2]">
+                <Button onClick={searchJobHandler} className="rounded-r-full bg-[#6A38C2] flex-shrink-0">
                     <Search className='h-5 w-5'/>
                 </Button>
             </div>
@@ -40,3 +40,48 @@ function HeroSection() {
 }
 
 export default HeroSection
+
+
+
+// import React, { useState } from 'react'
+// import { Button } from './ui/button'
+// import { Search } from 'lucide-react'
+// import { useDispatch } from 'react-redux'
+// import { useNavigate } from 'react-router-dom'
+// import { setSearchedQuery } from '@/redux/jobSlice'
+
+// function HeroSection() {
+//   const [query, setQuery] = useState("");
+//   const dispatch = useDispatch();
+//   const navigate = useNavigate();
+
+//   const searchJobHandler = () => {
+//     dispatch(setSearchedQuery(query));
+//     navigate("/jobs");
+//   }
+
+//   return (
+//     <div className='text-center '>
+//         <div className='flex flex-col gap-4 my-10'>
+//             <span className='mx-auto px-4 py-2 rounded-full bg-gray-300 text-[#F83001] font-medium'>No. 1 Job Hunt Website</span>
+//             <h1 className='text-5xl font-bold'>Search, Apply & <br/> Get Your <span className='text-[#6A38C2]'>Dream Joobs </span></h1>
+//             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus fugit, explicabo ad atque ?</p>
+//             <div className='flex w-[40%] shadow-lg border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto'>
+//                 <input
+//                     type='text'
+//                     placeholder='Find Your dream jobs'
+//                     value={query}
+//                     onChange={(e) => setQuery(e.target.value)}
+//                     onKeyDown={(e) => { if(e.key === 'Enter') searchJobHandler(); }}
+//                     className='outline-none border-none w-full'
+//                 />
+//                 <Button onClick={searchJobHandler} className="rounded-r-full bg-[#6A38C2]">
+//                     <Search className='h-5 w-5'/>
+//                 </Button>
+//             </div>
+//         </div>
+//     </div>
+//   )
+// }
+
+// export default HeroSection

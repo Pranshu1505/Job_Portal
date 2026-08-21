@@ -25,7 +25,7 @@ function CategoryCarouesl() {
 
   return (
     <div>
-        <Carousel className="w-full max-w-xl mx-auto my-15">
+        <Carousel className="w-full max-w-xs md:max-w-xl mx-auto my-8 md:my-15 px-8">
             <CarouselContent>
                 {
                     category.map((cat, index) => (
